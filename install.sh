@@ -32,10 +32,10 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 # Get Oh-My-Posh
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
-wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O /usr/local/bin/oh-my-posh/poshthemes/themes.zip
-unzip /usr/local/bin/oh-my-posh/poshthemes/themes.zip -d /usr/local/bin/oh-my-posh/poshthemes/themes/
-chmod u+rw /usr/local/bin/oh-my-posh/poshthemes/themes/*.json
-rm /usr/local/bin/oh-my-posh/poshthemes/themes.zip
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O /usr/local/bin/oh-my-posh/poshthemes/themes.zip
+sudo unzip /usr/local/bin/oh-my-posh/poshthemes/themes.zip -d /usr/local/bin/oh-my-posh/poshthemes/themes/
+sudo chmod u+rw /usr/local/bin/oh-my-posh/poshthemes/themes/*.json
+sudo rm /usr/local/bin/oh-my-posh/poshthemes/themes.zip
 sudo cp fedora-bliss.omp.json /usr/local/bin/oh-my-posh/poshthemes/themes/
 echo 'eval "$(oh-my-posh --init --shell bash --config /usr/local/bin/oh-my-posh/poshthemes/themes/fedora-bliss.omp.json)"' >> ~/.bashrc
 sudo echo 'eval "$(oh-my-posh --init --shell bash --config /usr/local/bin/oh-my-posh/poshthemes/themes/fedora-bliss.omp.json)"' >> /root/.bashrc
