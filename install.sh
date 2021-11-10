@@ -17,6 +17,12 @@ sudo cp -r gtk-theme/Prof-Gnome-master/gnome-professional-40.1-dark /usr/share/t
 gsettings set org.gnome.desktop.interface gtk-theme 'gnome-professional-40.1-dark'
 gsettings set org.gnome.desktop.wm.preferences theme 'gnome-professional-40.1-dark'
 
+# Fix theme for FlatPaks
+sudo dnf install ostree libappstream-glib
+wget -O pakitheme.zip https://github.com/refi64/stylepak/archive/refs/heads/master.zip
+unzip -d pakitheme pakitheme.zip
+sudo pakitheme/stylepak install-system
+
 # Get Papirus Icon Theme Grey
 wget -O icons.zip https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/heads/master.zip 
 unzip -d icons icons.zip
@@ -32,5 +38,5 @@ chmod u+rw /usr/local/bin/oh-my-posh/poshthemes/themes/*.json
 rm /usr/local/bin/oh-my-posh/poshthemes/themes.zip
 sudo cp fedora-bliss.omp.json /usr/local/bin/oh-my-posh/poshthemes/themes/
 echo 'eval "$(oh-my-posh --init --shell bash --config /usr/local/bin/oh-my-posh/poshthemes/themes/fedora-bliss.omp.json)"' >> ~/.bashrc
-echo 'eval "$(oh-my-posh --init --shell bash --config /usr/local/bin/oh-my-posh/poshthemes/themes/fedora-bliss.omp.json)"' >> /root/.bashrc
+sudo echo 'eval "$(oh-my-posh --init --shell bash --config /usr/local/bin/oh-my-posh/poshthemes/themes/fedora-bliss.omp.json)"' >> /root/.bashrc
 . ~/.bashrc
