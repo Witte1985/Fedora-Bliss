@@ -21,7 +21,7 @@ gsettings set org.gnome.desktop.wm.preferences theme 'gnome-professional-40.1-da
 sudo dnf install ostree libappstream-glib
 wget -O pakitheme.zip https://github.com/refi64/stylepak/archive/refs/heads/master.zip
 unzip -d pakitheme pakitheme.zip
-sudo pakitheme/stylepak install-system
+sudo pakitheme/stylepak-master/stylepak install-system
 
 # Get Papirus Icon Theme Grey
 wget -O icons.zip https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/heads/master.zip 
